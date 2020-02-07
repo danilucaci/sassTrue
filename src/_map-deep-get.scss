@@ -1,0 +1,21 @@
+/// This function is to be used to return nested key values within a nested map
+/// @group utility
+/// @parameter {Variable} $map [null] - pass in map to be evaluated
+/// @parameter {Variable} $keys [null] - pass in keys to be evaluated
+/// @link https://css-tricks.com/snippets/sass/deep-getset-maps/ Article from CSS-Tricks
+/// @example scss - pass map and strings/variables into function
+///   $tokens: (
+///     'size': (
+///       'eighth': $size-eighth,
+///       'quarter': $size-quarter
+///     )
+///   );
+///   $var: auro_map-deep-get($tokens, 'size', 'eighth'); => $size-eighth
+///
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

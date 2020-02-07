@@ -1,0 +1,25 @@
+@import 'true';
+@import '../src/globals';
+@import '../src/breakpoint--lg';
+
+@include describe('breakpoint--lg()') {
+  @include it('should return content within pre-defined media query') {
+    @include assert {
+      @include output {
+        .breakpoint--lg {
+          @include breakpoint--lg {
+            color: orange;
+          }
+        }
+      }
+
+      @include expect {
+        @media screen and (min-width: 1232px) {
+          .breakpoint--lg {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}

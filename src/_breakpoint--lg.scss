@@ -1,0 +1,13 @@
+/// Standard breakpoint to support resolutions greater than 1232px.
+/// @group responsive
+/// @example scss - Set breakpoint
+///   .breakpoint--lg {
+///       @include breakpoint--lg {
+///         color: orange;
+///       }
+///   }
+@mixin breakpoint--lg {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}

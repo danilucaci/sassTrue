@@ -1,0 +1,14 @@
+@import 'true';
+@import '../src/map-deep-get';
+
+$map: (
+  'size': (
+    'sml': 10px
+  )
+);
+
+@include describe('map-deep-get()') {
+  @include it('should return the value from a deep-map request') {
+    @include assert-equal(map-deep-get($map, 'size', 'sml'), 10px);
+  }
+}

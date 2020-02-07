@@ -1,0 +1,17 @@
+{
+  "name": "sasstrue",
+  "version": "1.0.0",
+  "description": "Sass True demo repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
+    "sass-true": "^5.0.0"
+  }
+}
